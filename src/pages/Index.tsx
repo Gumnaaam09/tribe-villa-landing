@@ -1,25 +1,17 @@
 import Hero from "@/components/Hero";
-import Welcome from "@/components/Welcome";
+import About from "@/components/About";
 import VillaShowcase from "@/components/VillaShowcase";
-import Considerations from "@/components/Considerations";
-import Pricing from "@/components/Pricing";
-import Meetup from "@/components/Meetup";
-import InterestForm from "@/components/InterestForm";
-import TribeSystem from "@/components/TribeSystem";
-import FinalCTA from "@/components/FinalCTA";
+import Details from "@/components/Details";
+import CallToAction from "@/components/CallToAction";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Welcome />
+      <About />
       <VillaShowcase />
-      <Considerations />
-      <Pricing />
-      <Meetup />
-      <InterestForm />
-      <TribeSystem />
-      <FinalCTA />
+      <Details />
+      <CallToAction />
     </div>
   );
 };
