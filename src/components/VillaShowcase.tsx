@@ -1,14 +1,16 @@
 import coworkingImage from "@/assets/common-area.avif";
 import kitchenImage from "@/assets/kitchen.avif";
 import bedroomImage from "@/assets/bedroom.avif";
-import villaExterior from "@/assets/hero-villa.jpg";
 import livingRoom from "@/assets/living-room.avif";
-import fitnessArea from "@/assets/swimming-pool.avif";
-import wifiImage from "@/assets/wifi.jpg";
-import securityImage from "@/assets/security.jpg";
-import communityEvent from "@/assets/community-event.jpg";
-import bathroomImage from "@/assets/bathroom.avif";
+import swimmingPool from "@/assets/swimming-pool.avif";
 import rooftopImage from "@/assets/rooftop.avif";
+import villa1 from "@/assets/villa-1.avif";
+import villa2 from "@/assets/villa-2.avif";
+import villa3 from "@/assets/villa-3.avif";
+import villa4 from "@/assets/villa-4.avif";
+import villa5 from "@/assets/villa-5.avif";
+import wifiImage from "@/assets/wifi.jpg";
+import communityEvent from "@/assets/community-event.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -19,11 +21,17 @@ import {
 
 const VillaShowcase = () => {
   const galleryImages = [
-    { src: villaExterior, alt: "Modern villa exterior with contemporary architecture", title: "Villa Exterior" },
+    { src: bedroomImage, alt: "Stylish furnished bedroom", title: "Bedroom" },
+    { src: kitchenImage, alt: "Bright shared kitchen with modern amenities", title: "Kitchen" },
     { src: livingRoom, alt: "Spacious living room for community gatherings", title: "Living Room" },
-    { src: coworkingImage, alt: "Modern co-working lounge with comfortable seating", title: "Co-working Lounge" },
-    { src: kitchenImage, alt: "Bright shared kitchen with modern amenities", title: "Shared Kitchen" },
-    { src: bedroomImage, alt: "Stylish furnished bedroom", title: "Private Room" },
+    { src: coworkingImage, alt: "Modern common area with comfortable seating", title: "Common Area" },
+    { src: swimmingPool, alt: "Refreshing swimming pool", title: "Swimming Pool" },
+    { src: rooftopImage, alt: "Beautiful rooftop space", title: "Rooftop" },
+    { src: villa1, alt: "Villa interior view", title: "Villa View" },
+    { src: villa2, alt: "Villa space", title: "Villa Space" },
+    { src: villa3, alt: "Villa area", title: "Villa Area" },
+    { src: villa4, alt: "Villa room", title: "Villa Room" },
+    { src: villa5, alt: "Villa facility", title: "Villa Facility" },
   ];
 
   const amenities = [
@@ -31,10 +39,8 @@ const VillaShowcase = () => {
     { name: "High-Speed Wi-Fi", image: wifiImage, alt: "Fast reliable internet connectivity" },
     { name: "Common Area", image: coworkingImage, alt: "Spacious common area for relaxation" },
     { name: "Shared Kitchen", image: kitchenImage, alt: "Modern shared kitchen facilities" },
-    { name: "Swimming Pool", image: fitnessArea, alt: "Refreshing swimming pool" },
-    { name: "Private Bathroom", image: bathroomImage, alt: "Clean modern bathroom facilities" },
+    { name: "Swimming Pool", image: swimmingPool, alt: "Refreshing swimming pool" },
     { name: "Rooftop Access", image: rooftopImage, alt: "Beautiful rooftop space" },
-    { name: "24×7 Security", image: securityImage, alt: "Round-the-clock security system" },
     { name: "Community Events", image: communityEvent, alt: "Regular networking events" },
   ];
 
