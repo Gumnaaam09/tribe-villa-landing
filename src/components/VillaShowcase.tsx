@@ -1,12 +1,14 @@
-import coworkingImage from "@/assets/coworking-lounge.jpg";
-import kitchenImage from "@/assets/kitchen.jpg";
-import bedroomImage from "@/assets/bedroom.jpg";
-import villaExterior from "@/assets/villa-exterior.jpg";
-import livingRoom from "@/assets/living-room.jpg";
-import fitnessArea from "@/assets/fitness-area.jpg";
+import coworkingImage from "@/assets/common-area.avif";
+import kitchenImage from "@/assets/kitchen.avif";
+import bedroomImage from "@/assets/bedroom.avif";
+import villaExterior from "@/assets/hero-villa.jpg";
+import livingRoom from "@/assets/living-room.avif";
+import fitnessArea from "@/assets/swimming-pool.avif";
 import wifiImage from "@/assets/wifi.jpg";
 import securityImage from "@/assets/security.jpg";
 import communityEvent from "@/assets/community-event.jpg";
+import bathroomImage from "@/assets/bathroom.avif";
+import rooftopImage from "@/assets/rooftop.avif";
 import {
   Carousel,
   CarouselContent,
@@ -27,9 +29,11 @@ const VillaShowcase = () => {
   const amenities = [
     { name: "Fully Furnished Rooms", image: bedroomImage, alt: "Comfortable furnished rooms" },
     { name: "High-Speed Wi-Fi", image: wifiImage, alt: "Fast reliable internet connectivity" },
-    { name: "Co-working Lounge", image: coworkingImage, alt: "Professional co-working space" },
+    { name: "Common Area", image: coworkingImage, alt: "Spacious common area for relaxation" },
     { name: "Shared Kitchen", image: kitchenImage, alt: "Modern shared kitchen facilities" },
-    { name: "Fitness Area", image: fitnessArea, alt: "Well-equipped fitness center" },
+    { name: "Swimming Pool", image: fitnessArea, alt: "Refreshing swimming pool" },
+    { name: "Private Bathroom", image: bathroomImage, alt: "Clean modern bathroom facilities" },
+    { name: "Rooftop Access", image: rooftopImage, alt: "Beautiful rooftop space" },
     { name: "24×7 Security", image: securityImage, alt: "Round-the-clock security system" },
     { name: "Community Events", image: communityEvent, alt: "Regular networking events" },
   ];
