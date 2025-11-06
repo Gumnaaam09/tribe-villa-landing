@@ -1,16 +1,17 @@
+import { useState } from "react";
 import coworkingImage from "@/assets/common-area.avif";
 import kitchenImage from "@/assets/kitchen.avif";
 import bedroomImage from "@/assets/bedroom.avif";
 import livingRoom from "@/assets/living-room.avif";
 import swimmingPool from "@/assets/swimming-pool.avif";
 import rooftopImage from "@/assets/rooftop.avif";
+import bathroomImage from "@/assets/bathroom.avif";
 import villa1 from "@/assets/villa-1.avif";
 import villa2 from "@/assets/villa-2.avif";
 import villa3 from "@/assets/villa-3.avif";
 import villa4 from "@/assets/villa-4.avif";
 import villa5 from "@/assets/villa-5.avif";
 import wifiImage from "@/assets/wifi.jpg";
-import communityEvent from "@/assets/community-event.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -18,8 +19,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const VillaShowcase = () => {
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string; title: string } | null>(null);
+  
   const galleryImages = [
     { src: bedroomImage, alt: "Stylish furnished bedroom", title: "Bedroom" },
     { src: kitchenImage, alt: "Bright shared kitchen with modern amenities", title: "Kitchen" },
@@ -35,13 +43,16 @@ const VillaShowcase = () => {
   ];
 
   const amenities = [
-    { name: "Fully Furnished Rooms", image: bedroomImage, alt: "Comfortable furnished rooms" },
     { name: "High-Speed Wi-Fi", image: wifiImage, alt: "Fast reliable internet connectivity" },
     { name: "Common Area", image: coworkingImage, alt: "Spacious common area for relaxation" },
     { name: "Shared Kitchen", image: kitchenImage, alt: "Modern shared kitchen facilities" },
     { name: "Swimming Pool", image: swimmingPool, alt: "Refreshing swimming pool" },
     { name: "Rooftop Access", image: rooftopImage, alt: "Beautiful rooftop space" },
-    { name: "Community Events", image: communityEvent, alt: "Regular networking events" },
+    { name: "Washing Machine / Laundry Services", image: bathroomImage, alt: "Laundry facilities available" },
+    { name: "Lift Access", image: bedroomImage, alt: "Convenient lift access" },
+    { name: "Air Conditioning", image: livingRoom, alt: "Air conditioned spaces" },
+    { name: "Dedicated Workspace", image: coworkingImage, alt: "Workspace for productivity" },
+    { name: "Free Driveway Parking on Premises", image: rooftopImage, alt: "Free parking available" },
   ];
 
   return (
@@ -51,11 +62,8 @@ const VillaShowcase = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Villa Details
           </h2>
-          <p className="text-xl text-muted-foreground mb-2">
-            SideHustle Villa – [Villa Name]
-          </p>
           <p className="text-lg text-muted-foreground">
-            Location: [Insert Location]
+            Location: Koramangala, Bangalore
           </p>
         </div>
 
@@ -92,22 +100,37 @@ const VillaShowcase = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {amenities.map((amenity, index) => (
-              <div 
-                key={index} 
-                className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-[var(--shadow-soft)] transition-all duration-300"
-              >
-                <div className="relative h-40 overflow-hidden">
-                  <img 
-                    src={amenity.image} 
-                    alt={amenity.alt}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4 flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                  <span className="text-foreground font-medium">{amenity.name}</span>
-                </div>
-              </div>
+              <Dialog key={index}>
+                <DialogTrigger asChild>
+                  <div 
+                    className="group bg-card rounded-xl overflow-hidden border border-border hover:shadow-[var(--shadow-soft)] transition-all duration-300 cursor-pointer"
+                  >
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={amenity.image} 
+                        alt={amenity.alt}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4 flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                      <span className="text-foreground font-medium">{amenity.name}</span>
+                    </div>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl">
+                  <div className="relative">
+                    <img 
+                      src={amenity.image} 
+                      alt={amenity.alt}
+                      className="w-full h-auto rounded-lg"
+                    />
+                    <p className="text-center text-lg font-semibold mt-4 text-foreground">
+                      {amenity.name}
+                    </p>
+                  </div>
+                </DialogContent>
+              </Dialog>
             ))}
           </div>
         </div>
