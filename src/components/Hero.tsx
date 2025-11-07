@@ -20,11 +20,14 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Logo */}
         <div className="mb-8 flex justify-center">
-          <img 
-            src={logo} 
-            alt="SideHustle Villa Logo" 
-            className="w-64 sm:w-80 md:w-96 h-auto"
-          />
+          <div className="relative">
+            <img 
+              src={logo} 
+              alt="SideHustle Villa Logo" 
+              className="w-48 sm:w-56 md:w-64 h-auto drop-shadow-2xl mix-blend-screen opacity-95 rounded-lg"
+              style={{ filter: 'brightness(1.1) contrast(0.95)' }}
+            />
+          </div>
         </div>
         
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
