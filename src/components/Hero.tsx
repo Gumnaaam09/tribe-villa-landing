@@ -16,20 +16,18 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/70 via-secondary/60 to-accent/40" />
       </div>
 
+      {/* Logo - Top Left */}
+      <div className="absolute top-6 left-6 z-20">
+        <img 
+          src={logo} 
+          alt="SideHustle Villa Logo" 
+          className="w-24 sm:w-28 md:w-32 h-auto drop-shadow-2xl mix-blend-screen opacity-95 rounded-lg"
+          style={{ filter: 'brightness(1.1) contrast(0.95)' }}
+        />
+      </div>
+
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Logo */}
-        <div className="mb-8 flex justify-center">
-          <div className="relative">
-            <img 
-              src={logo} 
-              alt="SideHustle Villa Logo" 
-              className="w-48 sm:w-56 md:w-64 h-auto drop-shadow-2xl mix-blend-screen opacity-95 rounded-lg"
-              style={{ filter: 'brightness(1.1) contrast(0.95)' }}
-            />
-          </div>
-        </div>
-        
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
           Welcome to the Next Stage:<br />
           <span className="text-accent drop-shadow-lg">
