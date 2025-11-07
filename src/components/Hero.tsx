@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-villa.jpg";
+import logo from "@/assets/logo-sidehustle-villa.jpg";
 
 const Hero = () => {
   return (
@@ -17,6 +18,15 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Logo */}
+        <div className="mb-8 flex justify-center">
+          <img 
+            src={logo} 
+            alt="SideHustle Villa Logo" 
+            className="w-64 sm:w-80 md:w-96 h-auto"
+          />
+        </div>
+        
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-background leading-tight">
           Welcome to the Next Stage:<br />
           <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -28,16 +38,6 @@ const Hero = () => {
         <p className="text-xl sm:text-2xl md:text-3xl text-background/90 mb-8 max-w-3xl mx-auto font-light">
           Live, grow, and hustle together.
         </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="hero" size="lg" className="group">
-            Join the Tribe
-            <ArrowRight className="transition-transform group-hover:translate-x-1" />
-          </Button>
-          <Button variant="secondary" size="lg">
-            Attend the Meetup
-          </Button>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
