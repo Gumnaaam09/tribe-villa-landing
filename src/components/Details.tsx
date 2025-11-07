@@ -6,6 +6,10 @@ const Details = () => {
     "Shared Growth and Learning",
     "Affordable, Modern Living",
     "Built-in Community Support",
+    "Prime Koramangala Location - Close to Tech Parks & Cafes",
+    "Modern Amenities - Swimming Pool, Rooftop & Workspace",
+    "Flexible Living Options - Choose Your Food Plan",
+    "Move-in Ready Furnished Spaces - No Setup Hassle",
   ];
 
   return (
@@ -48,7 +52,7 @@ const Details = () => {
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border-2 border-primary shadow-[var(--shadow-soft)]">
                 <div className="flex items-center gap-2 mb-4">
                   <Check className="w-5 h-5 text-primary" />
-                  <h3 className="text-2xl font-bold text-foreground">With Food (Veg)</h3>
+                  <h3 className="text-2xl font-bold text-foreground">With Food</h3>
                 </div>
                 <div className="mb-4">
                   <span className="text-5xl font-bold text-primary">₹27,000</span>

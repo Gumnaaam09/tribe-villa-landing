@@ -12,6 +12,10 @@ import villa3 from "@/assets/villa-3.avif";
 import villa4 from "@/assets/villa-4.avif";
 import villa5 from "@/assets/villa-5.avif";
 import wifiImage from "@/assets/wifi.jpg";
+import airConditioningImage from "@/assets/air-conditioning.jpg";
+import liftImage from "@/assets/lift.jpg";
+import washingMachineImage from "@/assets/washing-machine.jpg";
+import drivewayImage from "@/assets/driveway.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -45,14 +49,14 @@ const VillaShowcase = () => {
   const amenities = [
     { name: "High-Speed Wi-Fi", image: wifiImage, alt: "Fast reliable internet connectivity" },
     { name: "Common Area", image: coworkingImage, alt: "Spacious common area for relaxation" },
-    { name: "Shared Kitchen", image: kitchenImage, alt: "Modern shared kitchen facilities" },
+    { name: "Fully Equipped Kitchen", image: kitchenImage, alt: "Modern fully equipped kitchen facilities" },
     { name: "Swimming Pool", image: swimmingPool, alt: "Refreshing swimming pool" },
     { name: "Rooftop Access", image: rooftopImage, alt: "Beautiful rooftop space" },
-    { name: "Washing Machine / Laundry Services", image: bathroomImage, alt: "Laundry facilities available" },
-    { name: "Lift Access", image: bedroomImage, alt: "Convenient lift access" },
-    { name: "Air Conditioning", image: livingRoom, alt: "Air conditioned spaces" },
+    { name: "Washing Machine / Laundry Services", image: washingMachineImage, alt: "Modern washing machine and laundry facilities" },
+    { name: "Lift Access", image: liftImage, alt: "Convenient elevator lift access" },
+    { name: "Air Conditioning", image: airConditioningImage, alt: "Air conditioned spaces throughout" },
     { name: "Dedicated Workspace", image: coworkingImage, alt: "Workspace for productivity" },
-    { name: "Free Driveway Parking on Premises", image: rooftopImage, alt: "Free parking available" },
+    { name: "Free Driveway Parking on Premises", image: drivewayImage, alt: "Free driveway parking available on premises" },
   ];
 
   return (
